@@ -17,7 +17,7 @@ export default {
     /** "entry"
      * the entry point
      */
-    entry: "./index.js",
+    entry: "./client/src/index.js",
     output: {
         /** "path"
          * the folder path of the output file
@@ -41,7 +41,7 @@ export default {
         /** "static"
          * This property tells Webpack what static file it should serve
         */
-        static: ["./public"],
+        static: ["./client/public"],
         /** "open"
          * opens the browser after server is successfully started
         */
@@ -83,7 +83,7 @@ export default {
     ,
     plugins: [
         new HtmlWebpackPlugin({
-            template: './public/index.html', // path to your source index.html
+            template: '.client/public/index.html', // path to your source index.html
             filename: 'index.html',       // name of the output file
             inject: 'body'                // script tags will be placed at the bottom of the body
         })
